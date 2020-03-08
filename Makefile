@@ -1,4 +1,4 @@
-repo=challenge-aido_LF-duckiebot-bridge
+repo=challenge-aido_lf-duckiebot-bridge
 branch=$(shell git rev-parse --abbrev-ref HEAD)
 arch=amd64
 tag=duckietown/$(repo):$(branch)-$(arch)
