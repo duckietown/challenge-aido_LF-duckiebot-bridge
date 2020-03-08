@@ -1,0 +1,2 @@
+zuper-nodes-python2-z5
+cbor2<5
