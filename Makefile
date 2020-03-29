@@ -1,7 +1,10 @@
+AIDO_REGISTRY ?= docker.io
+PIP_INDEX_URL ?= https://pypi.org/simple
+
 repo=challenge-aido_lf-duckiebot-bridge
 branch=$(shell git rev-parse --abbrev-ref HEAD)
 arch=amd64
-tag=duckietown/$(repo):$(branch)-$(arch)
+tag=$(AIDO_REGISTRY)/duckietown/$(repo):$(branch)-$(arch)
 
 
 build:
