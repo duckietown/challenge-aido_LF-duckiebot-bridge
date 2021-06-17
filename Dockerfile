@@ -1,6 +1,7 @@
 # We start from a base ROS image
 ARG ARCH=amd64
-FROM duckietown/dt-core:daffy-${ARCH}
+ARG DOCKER_REGISTRY=docker.io
+FROM ${DOCKER_REGISTRY}/duckietown/dt-core:daffy-${ARCH}
 
 RUN apt-get update -y && apt-get install -y --no-install-recommends \
          gcc \
