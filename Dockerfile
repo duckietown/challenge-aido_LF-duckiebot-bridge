@@ -2,7 +2,8 @@
 ARG ARCH=amd64
 ARG DOCKER_REGISTRY=docker.io
 ARG MAJOR=daffy
-FROM ${DOCKER_REGISTRY}/duckietown/dt-core:${MAJOR}-${ARCH}
+ARG BASE_TAG=${MAJOR}-${ARCH}
+FROM ${DOCKER_REGISTRY}/duckietown/dt-core:${BASE_TAG}
 
 RUN apt-get update -y && apt-get install -y --no-install-recommends \
          gcc \
