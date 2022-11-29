@@ -44,7 +44,7 @@ class ROSClient(object):
         self.shutdown = True
         msg = "ROSClient on_shutdown will send 0,0 command now."
         logger.info(msg)
-        commands = {u"motor_right": 0.0, u"motor_left": 0.0}
+        commands = {"motor_right": 0.0, "motor_left": 0.0}
         self.send_commands(commands)
 
     def _cam_cb(self, msg):
@@ -68,8 +68,8 @@ class ROSClient(object):
         cmd_msg = WheelsCmdStamped()
         cmd_msg.header.stamp.secs = time.secs
         cmd_msg.header.stamp.nsecs = time.nsecs
-        cmd_msg.vel_right = cmds[u"motor_right"]
-        cmd_msg.vel_left = cmds[u"motor_left"]
+        cmd_msg.vel_right = cmds["motor_right"]
+        cmd_msg.vel_left = cmds["motor_left"]
         if self.nsent_commands == 0:
             msg = "ROSClient publishing first commands."
             logger.info(msg)
